@@ -30,3 +30,47 @@ function copyPassword() {
   password.select();
   document.execCommand("copy");
 }
+
+// eyeIcon.onclick = function(){
+//   if(password.type=='password'){
+//     password.type='text'
+//     eyeIcon.innerText = 'visibility'
+//   }
+//   else{
+//     password.type='password'
+//     eyeIcon.innerText='visibility_off'
+//   }
+// }
+
+eyeIcon.addEventListener("click", function () {
+  if (password.type == "password") {
+    password.type = "text";
+    eyeIcon.innerText = "visibility";
+  } else {
+    password.type = "password";
+    eyeIcon.innerText = "visibility_off";
+  }
+});
+
+password.addEventListener("input", function () {
+  // we are deciding when we actually  want to show the strength
+  if (password.value.length > 0) {
+    strength.style.display = "inline";
+  } else {
+    strength.style.display = "none";
+  }
+
+  if (password.value.length < 4) {
+    strength.innerText = "weak";
+    strength.style.color = "red";
+    password.style.border = "2px solid red";
+  } else if (password.value.length >= 4 && password.value.length < 8) {
+    strength.innerText = "medium";
+    strength.style.color = "orange";
+    password.style.border = "2px solid orange";
+  } else {
+    strength.innerText = "strong";
+    strength.style.color = "green";
+    password.style.border = "2px solid green";
+  }
+});
