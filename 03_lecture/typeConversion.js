@@ -5,8 +5,11 @@
 // let bool = false
 // console.log(typeof(bool))
 
-// let name = "Saurav"
+// let name = " "
 // console.log(typeof(name))
+
+// const bool = Boolean(name)
+// console.log(bool)
 
 // NaN => Not a Number
 // let newName = Number(name)
