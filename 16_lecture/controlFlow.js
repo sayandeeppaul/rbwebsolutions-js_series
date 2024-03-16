@@ -96,3 +96,4 @@ console.log(
     ? `deparment is ${student}`
     : "department not been allocated"
 );
+
