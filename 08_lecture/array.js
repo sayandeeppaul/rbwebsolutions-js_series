@@ -11,8 +11,9 @@
 // spread operator 
 // const arr4  = [...arr1,...arr2]
 // console.log(arr4)
-
+                  
 // const arr5 = [1,2,3,4,[5,6,7,[8,9,10,[11,12,13,14]]]]
+// console.log(arr5[4][3][2])
 
 // console.log(... arr5)
 // const arr6=arr5.flat(Infinity)
@@ -25,4 +26,4 @@ let score1 =100
 let score2=200
 let score3=300
 
-console.log(Array.of(score1,score2,score3))
+// console.log(Array.of(score1,score2,score3))

@@ -101,3 +101,128 @@
 //     reverseNumber = reverseNumber * 10 + rem
 //     num = num/ 10
 // }
+
+// ======================== for of loop ===================
+
+//                  0           1       2               3
+// let myHeros = ["spiderman", "batman", "hulk", "captain amaerica"];
+
+// for (const hero of myHeros) {
+//   console.log(hero);
+// }
+
+// const myGames = {
+//     game1:"NFS",
+//     game2:"spider man 4",
+//     game3:"asphalt 8"
+// }
+
+// ************ We can not use for of loop for objects ****************
+
+// for (const game of myGames) {
+//     console.log(game)
+// }
+
+// ================================ for in loop =========================
+
+// const myGames = {
+//   game1: "NFS",
+//   game2: "spider man 4",
+//   game3: "asphalt 8",
+//   game4: {
+//     game5: "Mario",
+//     game6: {
+//       game7: {
+//         game8: "Getting over it",
+//       },
+//     },
+//   },
+// };
+
+// for (const key in myGames) {
+//   // console.log(typeof myGames[key])
+//   if (typeof myGames[key] === "object") {
+//     for (const subKey in myGames[key]) {
+//       //   console.log(subKey);
+//       if (typeof myGames[key][subKey] === "object") {
+//         for (const superKey in myGames[key][subKey]) {
+//           //    console.log(superKey)
+//           if (typeof myGames[key][subKey][superKey] === "object") {
+//             for (const supremeKey in myGames[key][subKey][superKey]) {
+//               console.log(myGames[key][subKey][superKey][supremeKey]);
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+// Iterate through each property of myGames
+// for (const key in myGames) {
+//     // console.log(typeof myGames[key])
+//     if (typeof myGames[key] === 'object') {
+//         for (const nestedKey in myGames[key]) {
+//             // console.log(nestedKey)
+//             console.log(myGames[key][nestedKey]);
+//         }
+//     }
+// }
+
+// for (const key in myGames) {
+//     console.log(key)
+//     console.log(myGames[key])
+//     console.log(myGames.key)    // not correct way to fetch data
+// }
+
+// ======================= for each loop ===================
+
+//                  0     1      2        3           4
+// const languages = ["C", "C++", "Java", "Python", "Javascript"];
+
+// languages.forEach(
+//   (item,index,array)=>{
+//       console.log(item,index,array)
+//   }
+// //   function (language) {
+// //     console.log(language);
+// //   }
+// );
+
+// output --->
+// C 0 [ 'C', 'C++', 'Java', 'Python', 'Javascript' ]
+// C++ 1 [ 'C', 'C++', 'Java', 'Python', 'Javascript' ]
+// Java 2 [ 'C', 'C++', 'Java', 'Python', 'Javascript' ]
+// Python 3 [ 'C', 'C++', 'Java', 'Python', 'Javascript' ]
+// Javascript 4 [ 'C', 'C++', 'Java', 'Python', 'Javascript' ]
+
+const coding = [
+  {
+    languageName: "Javascript",
+    extension: ".js",
+  },
+  {
+    languageName: "Python",
+    extension: ".py",
+  },
+  {
+    languageName: "C Plus Plus",
+    extension: ".cpp",
+  },
+  {
+    languageName: "Java",
+    extension: ".java",
+  },
+];
+
+// const user ={
+//     "username" :"Sayandeep"
+// }
+
+// console.log(user["username"])
+
+coding.forEach((item, index, arr) => {
+  // console.log(item["extension"])
+  console.log(item.extension);
+  // console.log(item, index, arr)
+});
