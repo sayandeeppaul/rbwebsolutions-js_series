@@ -1,4 +1,4 @@
-// console.log(this)
+console.log(this);
 
 // context -> global
 // let balance = 1000
@@ -72,9 +72,9 @@ const addTwo = (num1, num2) => {
 
 // console.log(addTwo(2, 3));
 
-const name = ()=>(200)
+// const name = ()=>(200)
 
-console.log(name())
+// console.log(name())
 // const userDetails = () => (
 //     {username:"saurav"}
 //     )

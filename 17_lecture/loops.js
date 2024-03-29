@@ -200,18 +200,30 @@ const coding = [
   {
     languageName: "Javascript",
     extension: ".js",
+    user: {
+      downloads: "10M+",
+    },
   },
   {
     languageName: "Python",
     extension: ".py",
+    user: {
+      downloads: "100M+",
+    },
   },
   {
     languageName: "C Plus Plus",
     extension: ".cpp",
+    user: {
+      downloads: "5M+",
+    },
   },
   {
     languageName: "Java",
     extension: ".java",
+    user: {
+      downloads: "1M+",
+    },
   },
 ];
 
@@ -223,6 +235,93 @@ const coding = [
 
 coding.forEach((item, index, arr) => {
   // console.log(item["extension"])
-  console.log(item.extension);
+  // console.log(item.user.downloads);
   // console.log(item, index, arr)
+});
+
+// coding.forEach((item) => {
+//   // console.log(item)
+//   for (const key in item) {
+//     // console.log(key)
+//     if (typeof item[key] === "object") {
+//       // console.log(key)
+//       for (const elem in item[key]) {
+//         console.log(item[key][elem]);
+//       }
+//     }
+//   }
+// });
+
+favMovies = [
+  "Begin Again",
+  "Soul",
+  ["Matrix", "Matix Reloaded", "Matrix Revolutions"],
+  [
+    "Frozen",
+    "Frozen 2",
+    [
+      "Tangled",
+      "Alladin",
+      "Matrix",
+      "Matix Reloaded",
+      "Matrix Revolutions",
+      "Begin Again",
+      "Soul",
+    ],
+  ],
+];
+
+favMovies.forEach((element) => {
+  // console.log(element)
+  if (Array.isArray(element)) {
+    // console.log(element)
+
+    // element.forEach((items)=>{
+    //   console.log(items)
+    // })
+
+    element.forEach((item) => {
+      if (Array.isArray(item)) {
+        // console.log(item.length)
+        // let min = 0
+        // let max = item.length - 1
+        // randomIndex1 = Math.round(Math.random()*(max-min))
+        // randomIndex2 = Math.round(Math.random()*(max-min))
+
+        // console.log(randomIndex1,randomIndex2)
+        // console.log(item[randomIndex1]," ",item[randomIndex2])
+
+        for (let index = 0; index < item.length; index++) {
+          if (item[index]==="Matix Reloaded") {
+            continue
+          }
+          console.log(item[index])
+
+        }
+        // const filteredItems = item.filter(
+        //   (filterElem) =>
+        //     filterElem !== "Matrix Revolutions" && filterElem !== "Soul"
+        // );
+        // console.log(filteredItems);
+
+        // item.forEach((members)=>{
+        //   console.log(members)
+        // })
+
+        // for (const members of item) {
+        //   console.log(members)
+
+        // }
+
+        // console.log(item)
+        // const len = item.length
+        // console.log(len)
+        // for (let index = 0; index < len; index++) {
+        //   if (index===4) {
+        //     // console.log(item[index])
+        //   }
+        // }
+      }
+    });
+  }
 });
