@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Manipulation</title>
+  </head>
+  <body>
+    <!-- <div>
+        <h1 id="title" class="heading">Hey This is DOM Series <span style="display: none;" >I'm inside the span</span> </h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, optio? Cumque magni consequuntur ipsam nostrum alias quasi vel adipisci! Cum!</p>
+        <input type="password" name="" id="">
+    </div> -->
+
+    <!-- // what is the diff b/w --------------->
+
+    <!-- title.innerText
+        'Hey This is DOM Series'
+
+        title.innerHTML
+        'Hey This is DOM Series'
+
+        title.textContent
+        'Hey This is DOM Series' -->
+
+    <!-- <ul>
+            <li class="list-item">One</li>
+            <li class="list-item">Two</li>
+            <li class="list-item">Three</li>
+            <li class="list-item">Four</li>
+        </ul> -->
+
+    <!-- document.querySelector('ul')
+
+            <ul>​…​</ul>
+            ​
+            const myUl = document.querySelector('ul')
+            undefined
+
+            myUl.querySelector('li')
+            <li>​…​</li>​::marker​"One"</li>
+            ​
+            const myLi = myUl.querySelector('li')
+            undefined
+
+            myLi
+            <li>​…​</li>
+            ​
+            myLi.style.backgroundColor = 'yellow'
+            'yellow'
+
+            myLi.style.padding = '5px'
+            '5px'
+
+            myLi.innerText
+            'One'
+
+            myLi.innerText = 'five'
+            'five' -->
+
+    <!-- <div class="parent">
+      <div class="child" id="child1">Child 1</div>
+      <div class="child">Child 2</div>
+      <div class="child">Child 3</div>
+      <div class="child">Child 4</div>
+    </div> -->
+
+    <ul class="language">
+      <li>Python</li>
+      <!-- <li>Java</li> -->
+    </ul>
+
+    <script>
+        // const myDiv = document.createElement('div')
+        // myDiv.setAttribute("class","child")
+        // myDiv.innerText = "child 5"
+        // myDiv.style.backgroundColor = "yellow"
+        // myDiv.style.padding = "5px"
+        // console.log(myDiv)
+        // document.body.appendChild(myDiv)
+
+        // const myText = document.createTextNode("Child 5")
+        // myDiv.appendChild(myText)
+
+        // document.body.appendChild(myDiv)
+
+        function addLanguage(language){
+          const myLi = document.createElement("li")
+          // myLi.innerText = language
+          // let myUl = document.querySelector(".language")
+          // myUl.appendChild(myLi)
+
+          const dummyText = document.createTextNode(language)
+          myLi.appendChild(dummyText)
+          // <li>Java</li>
+          document.querySelector(".language").appendChild(myLi)
+        }
+
+        addLanguage("Java")
+        addLanguage("Typescript")
+
+        // edit 
+        const secondLanguage = document.querySelector("li:nth-child(2)")
+        const li = document.createElement("li")
+        const newLanguage = "C++"
+        li.innerText = newLanguage
+        secondLanguage.replaceWith(li)
+
+        const firstLanguage =  document.querySelector("li:first-child")
+        const newLi = document.createElement("li")
+        newLi.innerHTML = "Mojo"
+        firstLanguage.replaceWith(newLi)
+
+        const lastLanguage =  document.querySelector("li:last-child")
+        const veryNewLi = document.createElement("li")
+        veryNewLi.innerHTML = "Javascript"
+        lastLanguage.replaceWith(veryNewLi)
+
+        // remove
+        const lastElemLanguage =  document.querySelector("li:last-child")
+
+        // document.querySelector(".language").querySelector("li:last-child").remove()
+
+        // right syntax
+        // lastElemLanguage.remove()
+
+        // document.querySelector(".language li:last-child").remove()
+
+
+    </script>
+  </body>
+</html>
